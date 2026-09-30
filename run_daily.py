@@ -87,8 +87,9 @@ def publish_site(say):
     latest = os.path.join(ARCHIVE, "latest")
     site = os.path.join(HERE, "docs")
     os.makedirs(site, exist_ok=True)
-    pairs = [("report.html", "index.html"), ("qualifying.csv", "qualifying.csv"),
-             ("monitoring.csv", "monitoring.csv"), ("report.md", "report.md")]
+    pairs = [("report.html", "index.html"), ("artifact.html", "artifact.html"),
+             ("qualifying.csv", "qualifying.csv"), ("monitoring.csv", "monitoring.csv"),
+             ("report.md", "report.md"), ("companies.md", "companies.md")]
     for src, dst in pairs:
         s = os.path.join(latest, src)
         if os.path.exists(s):

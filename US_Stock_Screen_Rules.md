@@ -1,6 +1,6 @@
 # US Stock Screen: Profit Growth + 200-Day Moving Average Proximity
 
-**Report rules specification. Version 1.7, 30 September 2026.**
+**Report rules specification. Version 1.8, 30 September 2026.**
 
 ## 1. Purpose
 
@@ -197,6 +197,8 @@ archive/
   YYYY-MM-DD/              one folder per as-of close date
     report.md              the full report in Section 8 format
     report.html            the same run as a web page (Section 14), opens in any browser
+    companies.md           one section per qualifying company: description, HQ, screen figures,
+                           Financial Times tearsheet link (built by companies_report.py)
     artifact.html          the web page as a fragment for publishing on claude.ai
     qualifying.csv         one row per share passing all criteria, all Section 8.2 columns
     monitoring.csv         one row per excluded share: ticker, exclusion reason, Y1 to Y2 and D1 to D4 columns
@@ -232,3 +234,9 @@ Sharing options:
 - Pages on a free personal account requires a public repository. The report is then readable by anyone who has the link; it contains only public market data and the rules.
 - Until the remote exists the job still writes `docs/` locally and logs that publishing was skipped, so nothing else changes.
 - The full archive is committed alongside `docs/`, so every past close is browsable in the repository.
+
+## 16. Companies report
+
+- For each qualifying share, `companies_report.py` writes a section with the company's own business summary (as carried by Yahoo Finance, shortened to four sentences), headquarters, employee count, market cap, the screen figures behind its inclusion, and a link to its **Financial Times tearsheet** at markets.ft.com (ticker plus FT market code: NYQ for NYSE, NSQ for Nasdaq; a search link is used if the exchange is unknown).
+- Sections are grouped by sector with a contents list at the top. The report states plainly that it is a screen and not investment advice.
+- It is written to `archive/<date>/companies.md`, copied to `archive/latest/` and to `docs/companies.md` on the site. Produced after each daily run by the desktop scheduled task described in Section 10, or by hand.

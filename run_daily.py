@@ -106,7 +106,8 @@ def publish_site(say):
             asof = m.group(1) if m else ""
     except OSError:
         pass
-    cmds = [["git", "-C", HERE, "add", "docs", "archive/INDEX.md", "archive/" + asof if asof else "archive"],
+    cmds = [["git", "-C", HERE, "add", "docs", "archive/INDEX.md", "archive/latest",
+             "archive/" + asof if asof else "archive"],
             ["git", "-C", HERE, "commit", "-q", "-m", f"Screen as of {asof or 'latest'}"],
             ["git", "-C", HERE, "push", "-q"]]
     for c in cmds:

@@ -1,5 +1,9 @@
 # Publishing the daily page outside work (GitHub Pages)
 
+> **Status: set up on 30 September 2026.** Repository `BenCrepin/us-stock-screen` (personal account),
+> Pages serving `docs/` on `main`, live at https://bencrepin.github.io/us-stock-screen/ .
+> The steps below are kept for reference or for rebuilding on another machine.
+
 The daily job already writes the finished page to `docs/index.html`. Once this folder is a
 git repository with a remote on a **personal** GitHub account, the same job commits and pushes
 it every morning and GitHub Pages serves it at a link you can share with anyone.

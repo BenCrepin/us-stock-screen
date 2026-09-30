@@ -60,7 +60,7 @@ As of close: 2026-09-29  |  Run: 2026-09-30  |  Comparison: QOQ  |  Universe: 90
 
 | Ticker | Company | Close | SMA200 | Dist | Side | Slope | YTD high | High date | Off high | NI Q0 ($m) | NI prev ($m) | Growth | Q0 end | EPS Q0 | EPS est Q+1 | Exp growth | Analysts | Revisions | Mkt cap ($bn) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| AYI | Acuity Inc. | 308.79 | 315.07 | -1.99% | Below | Falling | 380.17 | 2026-01-05 | -18.8% | 141.0 | 96.8 | 45.7% | 2026-05-31 | 4.56 | 5.62 | 23.3% | 7 | Up | 9.2 |
+| AYI | Acuity Inc. | 308.79 | 315.07 | -1.99% | Below | Falling | 380.17 | 2026-01-05 | -18.8% | 141.0 | 96.8 | 45.7% | 2026-05-31 | 4.56 | 5.57 | 22.2% | 7 | Up | 9.2 |
 
 ## Industrials / Engineering & Construction  (1)
 
@@ -319,7 +319,7 @@ As of close: 2026-09-29  |  Run: 2026-09-30  |  Comparison: QOQ  |  Universe: 90
 | CEG | distance -8.57% outside band | 378.50 | 2026-01-05 | -30.1% | Yes | 12 | Yes | 12 | Yes | 12 | Yes | 15 |
 | CELH | distance -24.45% outside band | 59.31 | 2026-02-26 | -53.3% | Yes | 17 | Yes | 16 | Yes | 16 | Yes | 116 |
 | CF | distance +3.36% outside band | 141.96 | 2026-03-30 | -18.5% | Yes | 8 | Yes | 7 | Yes | 4 | No | 0 |
-| CFG | expected growth 7.2% below threshold | 75.33 | 2026-08-17 | -15.2% | Yes | 10 | Yes | 29 | Yes | 10 | Yes | 2 |
+| CFG | expected growth 7.0% below threshold | 75.33 | 2026-08-17 | -15.2% | Yes | 10 | Yes | 29 | Yes | 10 | Yes | 2 |
 | CFR | distance +5.52% outside band | 170.80 | 2026-08-17 | -9.7% | Yes | 11 | Yes | 11 | Yes | 1 | No | 0 |
 | CG | distance -20.42% outside band | 67.30 | 2026-01-15 | -41.0% | Yes | 21 | Yes | 16 | Yes | 16 | Yes | 32 |
 | CGNX | distance +7.79% outside band | 72.88 | 2026-06-30 | -18.1% | Yes | 6 | Yes | 12 | Yes | 12 | No | 0 |
@@ -734,7 +734,7 @@ As of close: 2026-09-29  |  Run: 2026-09-30  |  Comparison: QOQ  |  Universe: 90
 | NOVT | growth -40.6% below threshold | 176.38 | 2026-08-06 | -19.9% | Yes | 2 | Yes | 29 | Yes | 29 | No | 0 |
 | NOW | distance +11.80% outside band | 153.20 | 2026-01-02 | -15.2% | Yes | 4 | No | 0 | No | 0 | No | 0 |
 | NRG | distance -31.51% outside band | 189.96 | 2026-02-25 | -48.8% | Yes | 15 | Yes | 40 | Yes | 107 | Yes | 107 |
-| NSC | expected growth 9.6% below threshold | 358.60 | 2026-07-23 | -12.7% | Yes | 20 | Yes | 20 | Yes | 15 | No | 0 |
+| NSC | expected growth 9.4% below threshold | 358.60 | 2026-07-23 | -12.7% | Yes | 20 | Yes | 20 | Yes | 15 | No | 0 |
 | NTAP | distance +52.41% outside band | 210.04 | 2026-09-29 | -0.4% | No | 0 | No | 0 | No | 0 | No | 0 |
 | NTNX | distance +39.75% outside band | 74.42 | 2026-08-27 | -5.8% | No | 0 | No | 0 | No | 0 | No | 0 |
 | NTRS | distance +6.53% outside band | 195.78 | 2026-08-13 | -11.7% | Yes | 12 | Yes | 12 | Yes | 6 | No | 0 |
@@ -846,7 +846,7 @@ As of close: 2026-09-29  |  Run: 2026-09-30  |  Comparison: QOQ  |  Universe: 90
 | RMD | growth -3.8% below threshold | 277.67 | 2026-02-10 | -19.8% | Yes | 10 | No | 0 | No | 0 | Yes | 8 |
 | RNR | distance +7.05% outside band | 340.24 | 2026-09-03 | -4.6% | Yes | 3 | Yes | 2 | No | 0 | No | 0 |
 | ROIV | distance +21.80% outside band | 42.50 | 2026-09-08 | -14.1% | Yes | 5 | Yes | 1 | No | 0 | No | 0 |
-| ROK | expected growth 1.0% below threshold | 497.36 | 2026-06-30 | -13.2% | No | 0 | Yes | 40 | Yes | 30 | No | 0 |
+| ROK | expected growth 1.1% below threshold | 497.36 | 2026-06-30 | -13.2% | No | 0 | Yes | 40 | Yes | 30 | No | 0 |
 | ROKU | distance +24.11% outside band | 159.89 | 2026-08-25 | -4.8% | Yes | 11 | Yes | 1 | No | 0 | No | 0 |
 | ROL | distance -39.10% outside band | 66.14 | 2026-02-11 | -53.9% | Yes | 25 | Yes | 92 | Yes | 145 | Yes | 116 |
 | ROP | distance -5.68% outside band | 445.00 | 2026-01-02 | -21.5% | Yes | 17 | Yes | 11 | Yes | 4 | Yes | 8 |

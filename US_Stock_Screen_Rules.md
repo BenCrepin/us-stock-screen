@@ -1,6 +1,6 @@
 # US Stock Screen: Profit Growth + 200-Day Moving Average Proximity
 
-**Report rules specification. Version 1.8, 30 September 2026.**
+**Report rules specification. Version 1.9, 30 September 2026.**
 
 ## 1. Purpose
 
@@ -217,8 +217,8 @@ Every run also renders the report as a single self-contained web page.
 | W1. Content | Header with as-of close, run date and the four criteria. Summary tiles. The viewer's watchlist. Qualifying shares grouped by sector and industry. The full monitoring list with ticker, reason and watched-only filters. All tables sort on click. |
 | W2. New and dropped | Qualifying shares that were not in the previous archived close carry a **new** badge. The header lists how many joined and which tickers dropped out since that close. The first archived run has no comparison. |
 | W3. Watchlist | Any row can be starred. Starred tickers appear in a "My watchlist" table at the top showing that ticker's status on the latest run (qualifying, or the reason it is excluded), distance from the 200-day SMA, YTD high and date, sessions below each average, and the date it was added. |
-| W4. Persistence | On the published claude.ai page each signed-in viewer's watchlist is stored privately under their own identity in the page's database and follows them across devices. Nobody else, the owner included, can read it. In any other browser (for example the OneDrive copy) the watchlist is saved in that browser only, and the page says so. |
-| W5. Access needed | Viewers must be shared at **Contributor** level or above to save a watchlist on the published page. Viewer and Commenter levels can read the page but fall back to browser-only saving. |
+| W4. Persistence | The watchlist is saved in the viewer's browser and mirrored into the page address as `#w=TICKER,TICKER`. Bookmarking the page, or copying the link with the "Copy my watchlist link" button, keeps the list and opens it on any device or shares it with someone else. Opening a link with a watchlist merges it into the viewer's own. On a claude.ai copy with the database capability, signed-in editors additionally get a server-side copy. |
+| W5. Access needed | None. The GitHub Pages copy works for anyone with the link and needs no account. |
 | W6. Refresh | The published page shows the run it was last published with. Watchlists are kept across republishes because they live in the database, not in the page. |
 
 Sharing options:

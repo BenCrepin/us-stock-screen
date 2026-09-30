@@ -275,6 +275,8 @@ td.star-cell{padding:4px 6px;width:34px}
 .star{background:none;border:0;cursor:pointer;font-size:18px;line-height:1;color:var(--muted);padding:2px 4px;border-radius:4px}
 .star:hover{color:var(--star)}
 .star[aria-pressed="true"]{color:var(--star)}
+.linkbtn{font:inherit;font-size:12.5px;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--accent);cursor:pointer;margin-left:auto}
+.linkbtn:hover{border-color:var(--accent)}
 .remove{background:none;border:1px solid var(--line);color:var(--muted);border-radius:4px;padding:2px 8px;font:inherit;font-size:12px;cursor:pointer}
 .remove:hover{color:var(--neg);border-color:var(--neg)}
 .note{font-size:12.5px;color:var(--muted)}
@@ -299,9 +301,23 @@ SCRIPT = r"""
   var ref = null, writeChain = Promise.resolve();
   var use = (window.claude && typeof window.claude.use === 'function') ? function(n){return window.claude.use(n);} : function(){return Promise.resolve(null);};
 
-  // ---------- storage
+  // ---------- storage: browser storage plus the page address (#w=TICKER,TICKER) so a bookmark keeps the list
   function loadLocal(){ try{ var s=localStorage.getItem('screen-watchlist'); if(s) watch=JSON.parse(s)||{}; }catch(e){} }
-  function saveLocal(){ try{ localStorage.setItem('screen-watchlist', JSON.stringify(watch)); }catch(e){} }
+  function saveLocal(){ try{ localStorage.setItem('screen-watchlist', JSON.stringify(watch)); }catch(e){} syncHash(); }
+  function readHash(){
+    var m=/(?:^#|[#&])w=([A-Za-z0-9.,-]+)/.exec(location.hash||''); if(!m) return null;
+    var out={}; m[1].split(',').forEach(function(t){ t=t.trim().toUpperCase(); if(t) out[t]={added:(DATA.asof||'')}; }); return out;
+  }
+  function syncHash(){
+    var keys=Object.keys(watch).sort(), h=keys.length?'#w='+keys.join(','):'';
+    try{ if(h!==location.hash) history.replaceState(null,'',location.pathname+location.search+h); }catch(e){}
+  }
+  function copyLink(){
+    var btn=document.getElementById('copy-link'), url=location.href.split('#')[0]+(Object.keys(watch).length?'#w='+Object.keys(watch).sort().join(','):'');
+    function done(ok){ btn.textContent=ok?'Link copied':'Copy failed, select the address bar'; setTimeout(function(){btn.textContent='Copy my watchlist link';},2500); }
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(url).then(function(){done(true);},function(){done(false);}); }
+    else done(false);
+  }
   function persist(){
     if(mode==='cloud' && ref){
       var body={tickers:JSON.parse(JSON.stringify(watch)),updated:new Date().toISOString()};
@@ -388,9 +404,13 @@ SCRIPT = r"""
   }
   sortable(document.getElementById('mon')); sortable(document.getElementById('qual'));
 
-  // ---------- boot: local first, then the page database if this viewer has one
-  loadLocal(); renderWatch();
-  setNote('Watchlist saved in this browser. Signed-in viewers on claude.ai keep theirs across devices.', false);
+  // ---------- boot: address first, then browser storage, then the page database if this viewer has one
+  loadLocal();
+  var fromHash=readHash();
+  if(fromHash){ Object.keys(fromHash).forEach(function(t){ if(!watch[t]) watch[t]=fromHash[t]; }); }
+  renderWatch(); saveLocal();
+  document.getElementById('copy-link').addEventListener('click', copyLink);
+  setNote('Your watchlist is kept in this browser and in the page address. Bookmark the page, or copy the link to open the same list on another device or send it to someone.', false);
   Promise.all([use('user'), use('db')]).then(function(res){
     var user=res[0], db=res[1];
     if(!user||!db) return;
@@ -463,7 +483,8 @@ def build(q, m, meta, prev_qualifying=None, standalone=True):
 </section>
 {changes}
 
-<h2>My watchlist <span class="n" id="watch-count">0 watched</span></h2>
+<h2>My watchlist <span class="n" id="watch-count">0 watched</span>
+  <button type="button" class="linkbtn" id="copy-link">Copy my watchlist link</button></h2>
 <p class="note" id="watch-note"></p>
 <div class="wrap"><table id="watch">
 <thead><tr><th>Ticker</th><th>Status today</th><th class="num">vs SMA200</th><th class="num">YTD high &middot; date</th><th class="num">Off high</th>{sma_heads}<th>Added</th><th></th></tr></thead>

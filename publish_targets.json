@@ -1,0 +1,4 @@
+{
+  "_comment": "Where the daily task publishes the finished page. GitHub Pages is handled by run_daily.py. To also update a claude.ai page owned by Ben's private Claude account, publish it once from that account, share it with Benjamin.Crepin@iohk.io as an Editor, and paste its link below. The daily task then republishes archive/latest/artifact.html to that link. Leave empty to skip.",
+  "claude_artifact_url": ""
+}

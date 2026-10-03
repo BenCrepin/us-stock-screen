@@ -154,7 +154,7 @@ As of close: 2026-10-02  |  Run: 2026-10-03  |  Comparison: QOQ  |  Universe: 90
 
 ## Monitoring list: excluded shares (Section 9)
 
-882 shares excluded. Below 20d SMA: 631. Below 50d SMA: 667. Below 100d SMA: 596. Below 200d SMA: 515. Days counts consecutive trading sessions below the average, up to and including the latest close.
+882 shares excluded. Below 20d SMA: 630. Below 50d SMA: 666. Below 100d SMA: 595. Below 200d SMA: 514. Days counts consecutive trading sessions below the average, up to and including the latest close.
 
 | Ticker | Exclusion reason | YTD high | High date | Off high | Below 20d | Days 20d | Below 50d | Days 50d | Below 100d | Days 100d | Below 200d | Days 200d |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -613,11 +613,11 @@ As of close: 2026-10-02  |  Run: 2026-10-03  |  Comparison: QOQ  |  Universe: 90
 | KHC | distance -7.33% outside band | 28.09 | 2026-07-29 | -21.0% | Yes | 20 | Yes | 20 | Yes | 11 | Yes | 8 |
 | KIM | distance -4.43% outside band | 26.65 | 2026-07-28 | -16.5% | Yes | 46 | Yes | 43 | Yes | 33 | Yes | 14 |
 | KKR | distance -12.32% outside band | 137.28 | 2026-01-07 | -34.2% | Yes | 20 | Yes | 17 | Yes | 9 | Yes | 18 |
-| KLAC | distance +16.35% outside band | 307.37 | 2026-06-30 | -32.7% | No | 0 | No | 0 | No | 0 | No | 0 |
+| KLAC | insufficient price history | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
 | KMB | distance -8.04% outside band | 116.82 | 2026-07-07 | -19.2% | Yes | 21 | Yes | 24 | Yes | 19 | Yes | 19 |
 | KMI | growth -11.1% below threshold | 34.81 | 2026-05-19 | -10.7% | Yes | 9 | Yes | 10 | Yes | 22 | Yes | 7 |
 | KNF | distance -34.17% outside band | 96.28 | 2026-06-25 | -47.7% | Yes | 63 | Yes | 54 | Yes | 55 | Yes | 43 |
-| KNSL | distance -7.17% outside band | 421.90 | 2026-02-06 | -21.8% | Yes | 20 | Yes | 13 | Yes | 6 | Yes | 9 |
+| KNSL | insufficient price history | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
 | KNX | distance +2.54% outside band | 82.86 | 2026-06-12 | -19.4% | Yes | 18 | Yes | 51 | Yes | 19 | No | 0 |
 | KO | distance +7.05% outside band | 92.49 | 2026-08-24 | -7.4% | Yes | 14 | Yes | 5 | No | 0 | No | 0 |
 | KR | distance -7.05% outside band | 76.58 | 2026-03-12 | -22.9% | Yes | 1 | No | 0 | Yes | 3 | Yes | 91 |
